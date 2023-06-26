@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return {"status": "up"}, 200
+    return "up", 200
 
 
 @app.route("/api/status")
@@ -52,4 +52,4 @@ def test_(arr: str):
     state.last_updated = time.time() * 1000
     pickle.dump(state, open("state.pickle", "wb"))
 
-    return {"doorId": door}
+    return str(door) if door is not None else "null", 200

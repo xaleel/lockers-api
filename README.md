@@ -4,9 +4,9 @@ $ `pipenv shell`
 
 $ `pipenv install`
 
-$ `pipenv run python -m flask --app app run`
+$ `pipenv run python -m flask --app app run --host=0.0.0.0`
 
-API will be running on `http://127.0.0.1:5000`
+API will be running on `http://{DEVICE_IP}:5000`. Use this IP address in the app.
 
 # Endpoints
 
